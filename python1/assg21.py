@@ -1,0 +1,8 @@
+a=input("enter first string\n")
+b=input("enter second string\n")
+c=bool(a and b)
+d=bool(a or b)
+e=bool(not a)
+print("and operation of ( {} and {}) is {}".format(a,b,c))
+print("or operation of ({} or {} )is {}".format(a,b,d))
+print("not operation of ({})is {}".format(a,e))

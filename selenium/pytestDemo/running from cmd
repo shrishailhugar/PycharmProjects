@@ -1,0 +1,33 @@
+C:\Users\ninga\PycharmProjects\selenium\pytestDemo>py.test -v -s
+
+here -v=verbose == which will show more info of test
+     -s=with this we can see what we have written inside print
+
+ #to ruun specific file
+ C:\Users\ninga\PycharmProjects\selenium\pytestDemo>py.test test_demo2.py -v -s
+
+ #to run specific methods (using reg or substring match)
+   -k for regex match
+
+ C:\Users\ninga\PycharmProjects\selenium\pytestDemo>py.test -k second test_demo2.py -v -s
+
+      #from all files
+      C:\Users\ninga\PycharmProjects\selenium\pytestDemo>py.test -k second  -v -s
+
+ #to run with markers
+ C:\Users\ninga\PycharmProjects\selenium\pytestDemo>py.test -k second  -v -s -m smoke
+
+ #to skip inbuilt markers present
+ @pytest.mark.skip
+
+ #to execute but not report when it's results are dependent for another testcase but it' failing at that time we can run that method but not going to show in reporting
+ @pytest.mark.xfail
+
+ #fixtures are used to run setup and tear down methods for test-cases==connftest file to generalize fixture
+ #connftest file to generalize fixture and make available for all testcases.
+ #name of file should be conftest.py only:
+  each file search fixture in local file if it's not available then it's going to get fixture in conftest.py
+  conftest file is available for each tc/file
+
+#To Run jenkins
+C:\work>java -jar "jenkins (1).war" -httpPort=8080 --enable-future-java
